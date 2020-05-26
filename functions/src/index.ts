@@ -7,7 +7,7 @@ import { AppModule } from './app.module'
 
 const server = express()
 
-export const createNestServer = async (expressInstance) => {
+export const createNestServer = async (expressInstance: any) => {
   const app = await NestFactory.create(
     AppModule,
     new ExpressAdapter(expressInstance)
