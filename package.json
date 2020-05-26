@@ -13,8 +13,8 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.{js,vue}": "npm run lint",
-    "*.{css,vue}": "stylelint"
+    "*.{js,vue,ts}": ["eslint --fix --ignore-path .gitignore .","git add "],
+    "*.{css,vue}": ["stylelint","git add "]
   },
   "husky": {
     "hooks": {
